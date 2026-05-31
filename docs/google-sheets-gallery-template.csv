@@ -1,0 +1,3 @@
+type,title,description,imageUrl,media,link,isActive,sortOrder
+dokumentasi,Dokumentasi Pertunjukan,Suasana pementasan dan perjumpaan budaya.,https://contoh.com/foto-dokumentasi.jpg,,,TRUE,1
+liputan,Judul Liputan Terbaru,,,"Nama Media",https://contoh.com/link-berita,TRUE,2
