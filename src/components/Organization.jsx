@@ -56,8 +56,8 @@ export default function Organization({ copy }) {
                   </div>
                   <p className="text-xs font-black uppercase tracking-[0.3em] text-teal">{copy.organization.leaderLabels[index] || copy.organization.leaderLabels[1]}</p>
                   <h3 className="mt-3 font-display text-2xl font-bold text-bone">{person.name}</h3>
-                  <p className="mt-1 text-sm font-bold text-gold">{person.role}</p>
-                  <p className="mt-4 text-sm leading-7 text-bone/62">{person.note}</p>
+                  <p className="mt-1 text-sm font-bold text-gold">{copy.organization.leaderRoles[index] || person.role}</p>
+                  <p className="mt-4 text-sm leading-7 text-bone/62">{copy.organization.leaderNotes[index] || person.note}</p>
                 </div>
               </div>
             </article>
@@ -74,13 +74,15 @@ export default function Organization({ copy }) {
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {performanceMembers.map((member) => {
+            {performanceMembers.map((member, index) => {
+              const localizedMember = copy.organization.performanceMembers[index] || [member.name, member.role, member.group];
+              const [name, role, group] = localizedMember;
               const Icon = roleIcons[member.group] || Users;
               return (
                 <article key={`${member.name}-${member.role}`} className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gold/15 bg-night/55 transition hover:-translate-y-1 hover:border-teal/45">
                   <PersonPhoto
                     src={member.photo}
-                    alt={member.name}
+                    alt={name}
                     className="aspect-[4/3] rounded-none border-x-0 border-t-0 bg-moss/55"
                     imageClassName="object-cover object-center group-hover:scale-105"
                   />
@@ -89,10 +91,10 @@ export default function Organization({ copy }) {
                       <span className="grid h-11 w-11 place-items-center rounded-xl bg-teal/10 text-teal">
                         <Icon size={20} />
                       </span>
-                      <span className="rounded-full border border-gold/20 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-gold/75">{member.group}</span>
+                      <span className="rounded-full border border-gold/20 px-3 py-1 text-[0.68rem] font-bold uppercase tracking-[0.18em] text-gold/75">{group}</span>
                     </div>
-                    <h4 className="font-display text-lg font-bold text-bone">{member.name}</h4>
-                    <p className="mt-2 text-sm font-semibold text-bone/58">{member.role}</p>
+                    <h4 className="font-display text-lg font-bold text-bone">{name}</h4>
+                    <p className="mt-2 text-sm font-semibold text-bone/58">{role}</p>
                   </div>
                 </article>
               );

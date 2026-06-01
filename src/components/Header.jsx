@@ -1,8 +1,8 @@
-import { Languages, Menu, MessageCircle, Moon, Sun, X } from "lucide-react";
+import { Languages, Menu, MessageCircle, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { assets, whatsappUrl } from "../data/siteData";
 
-export default function Header({ lang, setLang, theme, setTheme, copy }) {
+export default function Header({ lang, setLang, copy }) {
   const [isOpen, setIsOpen] = useState(false);
   const [activeHref, setActiveHref] = useState("#home");
   const navItems = [
@@ -12,8 +12,6 @@ export default function Header({ lang, setLang, theme, setTheme, copy }) {
     { label: copy.nav.gallery, href: "#galeri" },
     { label: copy.nav.contact, href: "#kontak" },
   ];
-  const nextTheme = theme === "dark" ? "light" : "dark";
-
   useEffect(() => {
     const updateActiveSection = () => {
       const offset = 130;
@@ -66,9 +64,6 @@ export default function Header({ lang, setLang, theme, setTheme, copy }) {
             <Languages size={17} />
             {lang === "id" ? "ID" : "EN"}
           </button>
-          <button type="button" onClick={() => setTheme(nextTheme)} className="grid h-11 w-11 place-items-center rounded-full border border-gold/20 bg-bone/[0.035] text-bone/70 hover:border-teal/45 hover:text-teal" aria-label={`Switch to ${nextTheme} theme`} title={theme === "dark" ? copy.common.light : copy.common.dark}>
-            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
-          </button>
         </div>
 
         <a href={whatsappUrl} target="_blank" rel="noreferrer" className="hidden items-center gap-2 rounded-full bg-teal px-5 py-3 text-sm font-bold text-night shadow-teal transition hover:bg-bone xl:inline-flex">
@@ -88,14 +83,10 @@ export default function Header({ lang, setLang, theme, setTheme, copy }) {
               {item.label}
             </a>
           ))}
-          <div className="grid grid-cols-2 gap-2 pt-1">
+          <div className="grid gap-2 pt-1">
             <button type="button" onClick={() => setLang(lang === "id" ? "en" : "id")} className="inline-flex items-center justify-center gap-2 rounded-xl border border-gold/15 px-4 py-3 text-sm font-black text-bone/72 hover:border-teal/45 hover:text-teal">
               <Languages size={17} />
               {lang === "id" ? "ID" : "EN"}
-            </button>
-            <button type="button" onClick={() => setTheme(nextTheme)} className="inline-flex items-center justify-center gap-2 rounded-xl border border-gold/15 px-4 py-3 text-sm font-black text-bone/72 hover:border-teal/45 hover:text-teal">
-              {theme === "dark" ? <Sun size={17} /> : <Moon size={17} />}
-              {theme === "dark" ? copy.common.light : copy.common.dark}
             </button>
           </div>
           <a href={whatsappUrl} target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 rounded-xl bg-teal px-4 py-3 text-sm font-black text-night shadow-teal hover:bg-bone">

@@ -23,7 +23,7 @@ export default function Footer({ copy }) {
 
       <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
         <div className="max-w-xl">
-          <p className="section-kicker">Majelis Seni</p>
+          <p className="section-kicker">{copy.hero.kicker}</p>
           <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-gold">Nyawiji</h2>
           <p className="mt-4 text-sm leading-7 text-bone/62">{copy.footer.body}</p>
 
@@ -59,7 +59,7 @@ export default function Footer({ copy }) {
             </p>
             <p className="flex items-center gap-3">
               <Mail size={17} className="shrink-0 text-teal" />
-              kontak@majelisseninyawiji.id
+              majeliswayangbarzanji@gmail.com
             </p>
           </div>
 

@@ -7,13 +7,16 @@
   kitab: "/assets/pembaca-kitab.png",
   dokumentasi: "/assets/dokumentasi-pertunjukan.png",
   dokumentasiFoto: "/assets/dokumentasi-1.jpg",
+  mahabah: "/assets/mahabah.png",
+  perangSuci: "/assets/perangsuci.jpg",
+  sangNabi: "/assets/sangnabi.png",
   logo: "/assets/font-logo.png",
   stageBg: "/assets/wayang-stage-bg.jpg",
 };
 
 export const whatsappNumber = "6281314553169";
 export const whatsappText = "Halo Majelis Seni Nyawiji, saya ingin berkonsultasi untuk mengundang pertunjukan Wayang Santri...";
-export const whatsappUrl = "https://wa.me/6281314553169";
+export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
 export const gallerySheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQvYKRCqoprdPkhmNfmF6h7uKh628SrXS5g0b6fA0Tv0i3fc41p-MAFWzLMO7LTdzigaKzHfYShTSNp/pub?gid=1092339592&single=true&output=csv";
 
 export const navItems = [
@@ -25,9 +28,9 @@ export const navItems = [
 ];
 
 export const photos = [
-  { src: assets.dokumentasiFoto, title: "Mahabah", desc: "Suasana pementasan dan perjumpaan budaya." },
-  { src: assets.poster, title: "Perang Suci", desc: "Materi visual untuk agenda seni dan dakwah." },
-  { src: assets.santri, title: "Sang Nabi", desc: "Karakter visual bernuansa pesantren." },
+  { src: assets.mahabah, title: "Mahabah", desc: "Mahabbah, Musikalisasi Barzanji & Wayang Santri pertama kali dipentaskan lewat dukungan program Fasilitasi Pemajuan Kebudayaan yang diselenggarakan oleh Balai Pelestarian Kebudayaan (BPK) Wilayah X Yogya-Jateng 2024." },
+  { src: assets.perangSuci, title: "Perang Suci", desc: "Materi visual untuk agenda seni dan dakwah." },
+  { src: assets.sangNabi, title: "Sang Nabi", desc: "Karakter visual bernuansa pesantren." },
 ];
 export const publications = [
   {
@@ -63,7 +66,7 @@ export const bookingEvents = [
 ];
 
 export const organizationPhotos = {
-  ketua: "/assets/rafi.jpg",
+  ketua: "/assets/ketua.jpg",
   wakilKetua: "/assets/wakilketua.jpg",
 };
 
@@ -79,30 +82,15 @@ export const socialMedia = [
 ];
 
 export const performanceMemberPhotos = {
-  abdulAzizRasjid: "/assets/rafi.jpg",
   ahmadNafisJauhari: "/assets/dalang.jpg",
   fathulMungin: "/assets/barzanji.jpg",
-  muhammadKharis: "/assets/rafi.jpg",
-  zaenalMaarif: "/assets/rafi.jpg",
-  muhtadir: "/assets/rafi.jpg",
-  marpuji: "/assets/rafi.jpg",
   danisSaputra: "/assets/hadroh.jpg",
-  devaSuryaSaputra: "/assets/rafi.jpg",
-  diasSaputra: "/assets/rafi.jpg",
-  chaerulAnas: "/assets/rafi.jpg",
-  zuhrulAnam: "/assets/rafi.jpg",
   cahwati: "/assets/sinden.jpg",
-  mHarsyaPambudi: "/assets/rafi.jpg",
 };
 
 export const performanceMembers = [
   { name: "Dalang", role: "Ahmad Nafis Jauhari", group: "Pakeliran", photo: performanceMemberPhotos.ahmadNafisJauhari || assets.gunungan },
-  { name: "Hadroh", role: "Tim Hadroh", group: "Hadrah", photo: performanceMemberPhotos.danisSaputra || assets.rebana },
-  { name: "Barzanji", role: "Tim Barzanji", group: "Barzanji", photo: performanceMemberPhotos.fathulMungin || assets.santri },
-  { name: "Sinden", role: "Cahwati", group: "Vokal", photo: performanceMemberPhotos.cahwati || assets.kitab },
+  { name: "Hadroh", role: "Tim Hadroh Saljul Qulub", group: "Hadrah", photo: performanceMemberPhotos.danisSaputra || assets.rebana },
+  { name: "Barzanji", role: "Tim Barzanji Nyawiji", group: "Barzanji", photo: performanceMemberPhotos.fathulMungin || assets.santri },
+  { name: "Sinden", role: "Tim Sinden Nyawiji", group: "Vokal", photo: performanceMemberPhotos.cahwati || assets.kitab },
 ];
-
-
-
-
-

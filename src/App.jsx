@@ -11,20 +11,15 @@ import { getCopy } from "./data/i18n";
 
 export default function App() {
   const [lang, setLang] = useState("id");
-  const [theme, setTheme] = useState("dark");
   const copy = getCopy(lang);
 
   useEffect(() => {
     document.documentElement.lang = lang === "id" ? "id" : "en";
   }, [lang]);
 
-  useEffect(() => {
-    document.documentElement.dataset.theme = theme;
-  }, [theme]);
-
   return (
     <>
-      <Header lang={lang} setLang={setLang} theme={theme} setTheme={setTheme} copy={copy} />
+      <Header lang={lang} setLang={setLang} copy={copy} />
       <main>
         <Hero copy={copy} />
         <Profile copy={copy} />

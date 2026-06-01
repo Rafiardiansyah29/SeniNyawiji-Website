@@ -121,12 +121,12 @@ export default function Gallery({ copy }) {
     <section id="galeri" className="section-shell">
       <div className="absolute inset-x-0 top-0 h-px bg-gold/35" />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <div className="max-w-3xl">
+        <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
+          <div>
             <p className="section-kicker">{copy.gallery.kicker}</p>
-            <h2 className="section-title">{copy.gallery.title}</h2>
+            <h2 className="section-title mx-auto max-w-none sm:whitespace-nowrap">{copy.gallery.title}</h2>
           </div>
-          <div className="hidden h-24 w-24 rounded-full border border-gold/25 bg-gold/10 shadow-gold md:block" />
+          <div className="mt-6 h-px w-28 bg-gold/55 shadow-gold" />
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
