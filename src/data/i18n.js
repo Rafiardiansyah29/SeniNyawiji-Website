@@ -29,8 +29,8 @@ export const translations = {
     },
     hero: {
       kicker: "Majelis Seni",
-      subtitle: "Wayang Santri Cilacap dengan rasa panggung yang tenang, dalam, dan berkelas.",
-      body: "Wayang, rebana, kisah teladan, dan simbol gunungan disusun menjadi pengalaman budaya yang hangat tanpa kehilangan wibawa panggung.",
+      subtitle: "Kantong budaya Dusun Bendagede, Cilacap.",
+      body: "Majelis Seni Nyawiji mengembangkan kekayaan artistik komunitas seni warga pedesaan melalui aktivasi kisah-kisah kitab kuning menjadi pertunjukan wayang, nazam, dan kolaborasi hadrah dengan alat musik tradisional.",
     },
     profile: {
       kicker: "Profil",
@@ -91,8 +91,8 @@ export const translations = {
     },
     photos: [
       ["Mahabah", "Mahabbah, Musikalisasi Barzanji & Wayang Santri pertama kali dipentaskan lewat dukungan program Fasilitasi Pemajuan Kebudayaan yang diselenggarakan oleh Balai Pelestarian Kebudayaan (BPK) Wilayah X Yogya-Jateng 2024."],
-      ["Perang Suci", "Materi visual untuk agenda seni dan dakwah."],
-      ["Sang Nabi", "Karakter visual bernuansa pesantren."],
+      ["Perang Suci", "Perang Suci, Kisah Resolusi Jihad mengangkat gelora perjuangan para santri saat turun ke jalan dalam upaya mempertahankan kemerdekaan Indonesia pada periode Revolusi Fisik 1945 melawan tentara Belanda. Pementasan yang memadukan permainan wayang dan adegan pertarungan silat ini bagian dari peringatan Hari Santri Nasional 2024 yang di diselenggarakan oleh Majelis Wakil Cabang Nahdlatul Ulama (MWCNU) Kecamatan Bantarsari di Lapangan Asem Bantarsari, Kabupaten Cilacap, Jawa Tengah."],
+      ["Sang Nabi", "Sang Nabi, Musikalisasi Barzanji & Wayang Santri bagian dari program Penciptaan Karya Kreatif Inovatif (PKKI) dukungan pendanaan Danaindonesiaraya dari Kementerian Kebudayaan Republik Indonesia. Karya ini bertumpu pada penyaduran kitab Iqd al-Jawahir (Kalung Permata) karya Syekh Ja'far bin Husin bin Abdul Karim Al-Barzanji, menjadi dialog sejumlah tokoh wayang yang dimainkan dalang untuk mengisahkan riwayat hidup Nabi Muhammad SAW."],
     ],
     bookingEvents: [
       "Pernikahan & resepsi keluarga",
@@ -188,8 +188,8 @@ export const translations = {
     },
     photos: [
       ["Mahabbah", "Mahabbah, a musical Barzanji and Wayang Santri performance, was first staged with support from the 2024 Cultural Advancement Facilitation program organized by the Cultural Preservation Office (BPK) Region X for Yogyakarta and Central Java."],
-      ["Holy Battle", "Visual material for art and da'wah agendas."],
-      ["The Prophet", "A visual character with pesantren nuance."],
+      ["Holy Battle", "Holy Battle, The Story of the Jihad Resolution, raises the spirit of santri struggle as they took to the streets to defend Indonesia's independence during the 1945 Physical Revolution against Dutch forces. This performance combines wayang play and pencak silat battle scenes as part of the 2024 National Santri Day commemoration organized by the Bantarsari Branch Council of Nahdlatul Ulama (MWCNU) at Asem Bantarsari Field, Cilacap Regency, Central Java."],
+      ["The Prophet", "The Prophet, a musical Barzanji and Wayang Santri performance, is part of the Innovative Creative Work Creation program (PKKI) supported by Danaindonesiaraya funding from the Ministry of Culture of the Republic of Indonesia. The work is based on an adaptation of Iqd al-Jawahir (The Jewel Necklace) by Sheikh Ja'far bin Husin bin Abdul Karim Al-Barzanji, transformed into dialogue among wayang characters performed by the dalang to tell the life story of Prophet Muhammad, peace be upon him."],
     ],
     bookingEvents: [
       "Weddings & family receptions",

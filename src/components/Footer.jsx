@@ -18,13 +18,13 @@ export default function Footer({ copy }) {
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-gold/15 bg-black px-5 py-12 text-bone lg:px-8">
+    <footer className="relative overflow-hidden border-t border-gold/15 bg-black py-10 text-bone">
       <div className="absolute inset-x-0 top-0 h-px bg-teal/35" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
+      <div className="site-container relative grid gap-8 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
         <div className="max-w-xl">
           <p className="section-kicker">{copy.hero.kicker}</p>
-          <h2 className="mt-3 font-display text-3xl font-bold leading-tight text-gold">Nyawiji</h2>
+          <h2 className="mt-3 font-display text-[1.7rem] font-bold leading-tight text-gold">Nyawiji</h2>
           <p className="mt-4 text-sm leading-7 text-bone/62">{copy.footer.body}</p>
 
           <div className="mt-6 flex flex-wrap gap-3">
@@ -57,9 +57,9 @@ export default function Footer({ copy }) {
               <MapPin size={17} className="mt-1 shrink-0 text-teal" />
               {copy.footer.location}
             </p>
-            <p className="flex items-center gap-3">
+            <p className="flex min-w-0 items-center gap-3 break-words">
               <Mail size={17} className="shrink-0 text-teal" />
-              majeliswayangbarzanji@gmail.com
+              <span className="min-w-0 break-all">majeliswayangbarzanji@gmail.com</span>
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function Footer({ copy }) {
         </div>
       </div>
 
-      <div className="relative mx-auto mt-10 flex max-w-7xl flex-col gap-3 border-t border-bone/10 pt-6 text-sm text-bone/45 sm:flex-row sm:items-center sm:justify-between">
+      <div className="site-container relative mt-8 flex flex-col gap-3 border-t border-bone/10 pt-6 text-sm text-bone/45 sm:flex-row sm:items-center sm:justify-between">
         <span>&copy; 2026 Majelis Seni Nyawiji. {copy.common.rights}</span>
         <span>{copy.footer.tagline}</span>
       </div>

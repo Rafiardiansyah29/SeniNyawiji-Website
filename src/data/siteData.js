@@ -7,9 +7,9 @@
   kitab: "/assets/pembaca-kitab.png",
   dokumentasi: "/assets/dokumentasi-pertunjukan.png",
   dokumentasiFoto: "/assets/dokumentasi-1.jpg",
-  mahabah: "/assets/mahabah.png",
+  mahabah: "/assets/mahabah.jpg",
   perangSuci: "/assets/perangsuci.jpg",
-  sangNabi: "/assets/sangnabi.png",
+  sangNabi: "/assets/sangnabi.jpg",
   logo: "/assets/font-logo.png",
   stageBg: "/assets/wayang-stage-bg.jpg",
 };
@@ -29,8 +29,8 @@ export const navItems = [
 
 export const photos = [
   { src: assets.mahabah, title: "Mahabah", desc: "Mahabbah, Musikalisasi Barzanji & Wayang Santri pertama kali dipentaskan lewat dukungan program Fasilitasi Pemajuan Kebudayaan yang diselenggarakan oleh Balai Pelestarian Kebudayaan (BPK) Wilayah X Yogya-Jateng 2024." },
-  { src: assets.perangSuci, title: "Perang Suci", desc: "Materi visual untuk agenda seni dan dakwah." },
-  { src: assets.sangNabi, title: "Sang Nabi", desc: "Karakter visual bernuansa pesantren." },
+  { src: assets.perangSuci, title: "Perang Suci", desc: "Perang Suci, Kisah Resolusi Jihad mengangkat gelora perjuangan para santri saat turun ke jalan dalam upaya mempertahankan kemerdekaan Indonesia pada periode Revolusi Fisik 1945 melawan tentara Belanda. Pementasan yang memadukan permainan wayang dan adegan pertarungan silat ini bagian dari peringatan Hari Santri Nasional 2024 yang di diselenggarakan oleh Majelis Wakil Cabang Nahdlatul Ulama (MWCNU) Kecamatan Bantarsari di Lapangan Asem Bantarsari, Kabupaten Cilacap, Jawa Tengah." },
+  { src: assets.sangNabi, title: "Sang Nabi", desc: "Sang Nabi, Musikalisasi Barzanji & Wayang Santri bagian dari program Penciptaan Karya Kreatif Inovatif (PKKI) dukungan pendanaan Danaindonesiaraya dari Kementerian Kebudayaan Republik Indonesia. Karya ini bertumpu pada penyaduran kitab Iqd al-Jawahir (Kalung Permata) karya Syekh Ja'far bin Husin bin Abdul Karim Al-Barzanji, menjadi dialog sejumlah tokoh wayang yang dimainkan dalang untuk mengisahkan riwayat hidup Nabi Muhammad SAW." },
 ];
 export const publications = [
   {
@@ -89,7 +89,7 @@ export const performanceMemberPhotos = {
 };
 
 export const performanceMembers = [
-  { name: "Dalang", role: "Ahmad Nafis Jauhari", group: "Pakeliran", photo: performanceMemberPhotos.ahmadNafisJauhari || assets.gunungan },
+  { name: "Dalang", role: "Ahmad Nafis Jauhari", group: "Pakeliran", photo: performanceMemberPhotos.ahmadNafisJauhari || assets.gunungan, imagePosition: "object-[center_18%]" },
   { name: "Hadroh", role: "Tim Hadroh Saljul Qulub", group: "Hadrah", photo: performanceMemberPhotos.danisSaputra || assets.rebana },
   { name: "Barzanji", role: "Tim Barzanji Nyawiji", group: "Barzanji", photo: performanceMemberPhotos.fathulMungin || assets.santri },
   { name: "Sinden", role: "Tim Sinden Nyawiji", group: "Vokal", photo: performanceMemberPhotos.cahwati || assets.kitab },

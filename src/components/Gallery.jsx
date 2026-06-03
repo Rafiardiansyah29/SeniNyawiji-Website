@@ -120,59 +120,62 @@ export default function Gallery({ copy }) {
   return (
     <section id="galeri" className="section-shell">
       <div className="absolute inset-x-0 top-0 h-px bg-gold/35" />
-      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="site-container relative">
         <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
           <div>
             <p className="section-kicker">{copy.gallery.kicker}</p>
-            <h2 className="section-title mx-auto max-w-none sm:whitespace-nowrap">{copy.gallery.title}</h2>
+            <h2 className="section-title mx-auto max-w-4xl">{copy.gallery.title}</h2>
           </div>
           <div className="mt-6 h-px w-28 bg-gold/55 shadow-gold" />
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {galleryPhotos.map((photo, index) => (
-            <article key={`${photo.title}-${index}`} className="group luxury-card flex h-full flex-col overflow-hidden rounded-[1.5rem] transition duration-500 hover:border-gold/55" style={{ animationDelay: `${index * 80}ms` }}>
+            <article key={`${photo.title}-${index}`} className="group luxury-card card-reveal flex h-full flex-col overflow-hidden rounded-[1.5rem] transition duration-500 hover:border-gold/55" style={{ animationDelay: `${index * 80}ms` }}>
               <div className="relative aspect-[4/3] overflow-hidden bg-moss/60">
                 <img src={photo.src} alt={photo.title} className="relative h-full w-full object-cover object-center transition duration-700 group-hover:scale-105" />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-night/18 via-transparent to-bone/5" />
               </div>
-              <div className="flex flex-1 flex-col border-t border-gold/15 p-6">
-                <h3 className="font-display text-xl font-bold text-bone">{photo.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-bone/60">{photo.desc}</p>
+              <div className="flex flex-1 flex-col border-t border-gold/15 p-5">
+                <h3 className="font-display text-lg font-bold text-bone">{photo.title}</h3>
+                <p className="mt-2 text-left text-[0.82rem] leading-6 text-bone/60 [hyphens:auto] sm:text-justify">{photo.desc}</p>
               </div>
             </article>
           ))}
         </div>
 
-        <div className="premium-frame mt-20 overflow-hidden rounded-[1.75rem] p-5 sm:p-7">
-          <div className="mb-8 flex flex-col justify-between gap-5 md:flex-row md:items-end">
-            <div>
+        <div className="premium-frame mt-16 overflow-hidden rounded-[1.75rem] p-5 sm:p-6">
+          <div className="mb-7 grid gap-4 border-b border-gold/10 pb-6 md:grid-cols-[1fr_0.72fr] md:items-end">
+            <div className="max-w-3xl">
               <p className="section-kicker">{copy.gallery.publicationKicker}</p>
-              <h3 className="mt-3 font-display text-2xl font-bold text-bone sm:text-3xl">{copy.gallery.publicationTitle}</h3>
+              <h3 className="mt-3 font-display text-[clamp(1.85rem,2.65vw,2.85rem)] font-bold leading-tight text-bone">{copy.gallery.publicationTitle}</h3>
             </div>
-            <p className="max-w-md text-sm leading-7 text-bone/58">
+            <p className="max-w-md text-sm leading-7 text-bone/58 md:ml-auto md:text-right">
               {copy.gallery.publicationBody}
             </p>
           </div>
 
-          <div className="grid gap-5 lg:grid-cols-2">
-            {galleryPublications.map((item) => (
-              <article key={`${item.no}-${item.title}`} className="group luxury-card flex h-full flex-col rounded-[1.25rem] p-5">
-                <div className="mb-5 flex items-center justify-between gap-4">
-                  <span className="grid h-14 w-14 place-items-center rounded-2xl border border-gold/25 bg-night/70 text-gold shadow-gold">{item.no}</span>
-                  <div className="rounded-2xl border border-gold/15 bg-night/45 px-4 py-3 text-right text-gold">
-                    <p className="text-xs font-black uppercase tracking-[0.22em] text-bone/45">{copy.common.media}</p>
-                    <p className="mt-1 text-lg font-bold">{item.media}</p>
+          <div className="grid gap-4 lg:grid-cols-2">
+            {galleryPublications.map((item, index) => (
+              <article key={`${item.no}-${item.title}`} className="group luxury-card card-reveal flex h-full flex-col rounded-[1.1rem] p-5" style={{ animationDelay: `${index * 70}ms` }}>
+                <div className="mb-4 flex items-start justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-gold/30 bg-night/70 text-sm font-bold text-gold shadow-gold">{item.no}</span>
+                    <p className="inline-flex items-center gap-2 text-[0.68rem] font-black uppercase tracking-[0.22em] text-teal">
+                      <Newspaper size={14} />
+                      {copy.common.publication}
+                    </p>
+                  </div>
+                  <div className="min-w-0 rounded-xl border border-gold/15 bg-night/35 px-3 py-2 text-right">
+                    <p className="text-[0.62rem] font-black uppercase tracking-[0.2em] text-bone/38">{copy.common.media}</p>
+                    <p className="mt-0.5 max-w-36 truncate text-sm font-bold text-gold sm:max-w-44">{item.media}</p>
                   </div>
                 </div>
-                <div className="flex-1">
-                  <p className="mb-2 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.24em] text-teal">
-                    <Newspaper size={16} />
-                    {copy.common.publication}
-                  </p>
-                  <h4 className="font-display text-xl font-bold leading-snug text-bone">{item.title}</h4>
+                <div className="flex flex-1 flex-col">
+                  <h4 className="text-base font-extrabold leading-7 text-bone sm:text-[1.05rem]">{item.title}</h4>
+                  <div className="mt-4 h-px w-full bg-gold/10" />
                 </div>
-                <a href={item.link} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-teal/45 bg-teal/10 px-5 py-3 text-sm font-bold text-teal transition hover:bg-teal hover:text-night">
+                <a href={item.link} target="_blank" rel="noreferrer" className="mt-4 inline-flex w-fit items-center justify-center gap-2 rounded-full border border-teal/40 bg-teal/10 px-4 py-2.5 text-sm font-bold text-teal transition hover:bg-teal hover:text-night">
                   {copy.common.readNews}
                   <ExternalLink size={17} />
                 </a>

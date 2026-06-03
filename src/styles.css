@@ -30,6 +30,7 @@
     font-size: 15px;
     line-height: 1.65;
     text-rendering: geometricPrecision;
+    overflow-wrap: anywhere;
   }
 
   #root {
@@ -83,7 +84,14 @@
   }
 
   .section-shell {
-    padding-block: clamp(5.5rem, 8vw, 8rem);
+    padding-block: clamp(4.75rem, 6.5vw, 6.75rem);
+  }
+
+  .site-container {
+    width: 100%;
+    max-width: 88rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
   }
 
   .section-shell::before,
@@ -117,7 +125,7 @@
     max-width: 780px;
     color: #efe6d1;
     font-family: "Terang Bulan", serif;
-    font-size: clamp(2.15rem, 4vw, 4.1rem);
+    font-size: clamp(2rem, 3.35vw, 3.65rem);
     font-weight: 700;
     line-height: 1.08;
     letter-spacing: 0;
@@ -134,11 +142,31 @@
     transition: transform 320ms ease, border-color 320ms ease, box-shadow 320ms ease, background-color 320ms ease;
   }
 
+  .luxury-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(115deg, transparent 18%, rgba(239, 230, 209, 0.08) 48%, transparent 72%);
+    opacity: 0;
+    transform: translateX(-120%);
+    transition: opacity 260ms ease;
+  }
+
   .luxury-card:hover {
     transform: translateY(-6px);
     border-color: rgba(32, 199, 201, 0.48);
     background-color: rgba(8, 40, 31, 0.76);
     box-shadow: 0 34px 105px rgba(0, 0, 0, 0.54), 0 0 38px rgba(32, 199, 201, 0.12);
+  }
+
+  .luxury-card:hover::after {
+    opacity: 1;
+    animation: cardSheen 900ms ease both;
+  }
+
+  .card-reveal {
+    animation: cardReveal 720ms cubic-bezier(0.2, 0.75, 0.25, 1) both;
   }
 
   .premium-frame {
@@ -160,6 +188,31 @@
   .gold-line {
     height: 1px;
     background: rgba(201, 166, 70, 0.58);
+  }
+
+  .hero-subtitle {
+    animation: subtitleGlow 6.5s ease-in-out infinite;
+    text-shadow: 0 0 0 rgba(201, 166, 70, 0);
+  }
+
+  .typewriter-text {
+    display: inline;
+  }
+
+  .typewriter-text::after {
+    content: "";
+    display: inline-block;
+    width: 0.08em;
+    height: 0.86em;
+    margin-left: 0.08em;
+    transform: translateY(0.08em);
+    background: currentColor;
+    opacity: 0;
+  }
+
+  .typewriter-text.is-active::after {
+    opacity: 0.72;
+    animation: cursorBlink 1.05s steps(2, start) infinite;
   }
 
   .logo-aura::before,
@@ -245,6 +298,46 @@
   }
 }
 
+@keyframes cardReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cardSheen {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes subtitleGlow {
+  0%, 100% {
+    color: #c9a646;
+    text-shadow: 0 0 0 rgba(201, 166, 70, 0);
+  }
+  45%, 55% {
+    color: #dec36c;
+    text-shadow: 0 0 18px rgba(201, 166, 70, 0.16);
+  }
+}
+
+@keyframes cursorBlink {
+  0%, 45% {
+    opacity: 0.72;
+  }
+  46%, 100% {
+    opacity: 0;
+  }
+}
+
 @keyframes wayangSerrrSpin {
   0% {
     transform: rotateY(0deg);
@@ -265,11 +358,33 @@
   }
 
   .section-shell {
-    padding-block: 4.75rem;
+    padding-block: 4rem;
   }
 
   .section-title {
-    font-size: 2.15rem;
+    font-size: clamp(1.85rem, 12vw, 2.4rem);
+    line-height: 1.12;
+  }
+
+  .section-kicker {
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+  }
+
+  .site-container {
+    padding-inline: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-container {
+    padding-inline: 3.5rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .site-container {
+    padding-inline: 4rem;
   }
 }
 
@@ -278,5 +393,21 @@
   a:hover,
   button:hover {
     transform: none;
+  }
+
+  .luxury-card:hover::after {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-subtitle {
+    animation: none;
+  }
+
+  .typewriter-text::after {
+    animation: none;
+    opacity: 0;
   }
 }
