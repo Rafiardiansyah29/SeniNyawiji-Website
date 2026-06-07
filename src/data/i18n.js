@@ -34,13 +34,13 @@ export const translations = {
     },
     profile: {
       kicker: "Profil",
-      title: "Bukan sekadar tontonan. Ini panggung warisan dan tuntunan.",
-      body: "Majelis Seni Nyawiji mengolah Wayang Santri sebagai wajah dakwah budaya yang elegan: tetap menjaga akar Jawa, membawa nilai keislaman, dan tampil dengan bahasa visual yang kuat untuk audiens masa kini.",
+      title: "Empat unsur menyatu dalam panggung Wayang Santri.",
+      body: "Majelis Seni Nyawiji merangkai wayang, dalang, penayagan, dan shalawat sebagai satu wajah dakwah budaya: berakar pada tradisi Jawa, hidup dalam rasa pesantren, dan tetap dekat dengan audiens masa kini.",
       cards: [
-        ["Wayang", "Wayang menjadi medium tutur yang halus: menyampaikan adab, tauhid, nasihat, dan kisah teladan tanpa kehilangan rasa hiburan."],
-        ["Dalang", "Berangkat dari masyarakat Banyumasan, dekat dengan pesantren, kampung, dan ruang perayaan warga."],
-        ["Penayagan", "Gunungan, hijau, biru, hitam, dan emas diramu menjadi identitas panggung yang mudah diingat."],
-        ["Shalawat", "Konsep pentas dapat disesuaikan untuk acara keluarga, festival, pengajian, sekolah, kampus, dan lembaga."],
+        ["Wayang", "Wayang menjadi media tutur yang halus untuk membawa kisah, nasihat, adab, dan nilai keteladanan ke tengah penonton."],
+        ["Dalang", "Dalang menghidupkan alur, karakter, rasa humor, dan pesan dakwah agar pertunjukan berjalan hangat dan bermakna."],
+        ["Penayagan", "Penayagan menjaga irama panggung lewat tabuhan, tembang, dan suasana musikal yang menyatu dengan gerak wayang."],
+        ["Shalawat", "Shalawat memberi napas rohani pada pementasan, menghadirkan cinta kepada Nabi dalam bahasa seni yang akrab."],
       ],
     },
     organization: {
@@ -131,13 +131,13 @@ export const translations = {
     },
     profile: {
       kicker: "Profile",
-      title: "More than a performance. A stage for heritage and guidance.",
-      body: "Majelis Seni Nyawiji presents Wayang Santri as an elegant form of cultural da'wah: rooted in Javanese tradition, carrying Islamic values, and shaped with a strong visual language for today's audience.",
+      title: "Four elements meet on the Wayang Santri stage.",
+      body: "Majelis Seni Nyawiji brings together wayang, the dalang, penayagan, and shalawat as one form of cultural da'wah: rooted in Javanese tradition, shaped by pesantren warmth, and open to today's audience.",
       cards: [
-        ["Wayang", "Wayang becomes a subtle storytelling medium for manners, faith, advice, and exemplary stories without losing its sense of entertainment."],
+        ["Wayang", "Wayang becomes a refined storytelling medium for stories, advice, manners, and exemplary values."],
         ["Dalang", "The dalang leads the flow of story, rhythm, character, and message throughout the performance."],
         ["Penayagan", "The musicians shape the atmosphere of the stage through rhythm, melody, and disciplined ensemble work."],
-        ["Shalawat", "Shalawat brings devotional warmth into the performance and strengthens its pesantren character."],
+        ["Shalawat", "Shalawat brings devotional warmth into the performance and expresses love for the Prophet through art."],
       ],
     },
     organization: {

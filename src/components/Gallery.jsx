@@ -116,6 +116,7 @@ export default function Gallery({ copy }) {
       no: String(index + 1).padStart(2, "0"),
     }));
   }, [sheetPublications]);
+  const [featuredPublication, ...secondaryPublications] = galleryPublications;
 
   return (
     <section id="galeri" className="section-shell">
@@ -146,41 +147,57 @@ export default function Gallery({ copy }) {
 
         <div className="premium-frame mt-16 overflow-hidden rounded-[1.75rem] p-5 sm:p-6">
           <div className="mb-7 grid gap-4 border-b border-gold/10 pb-6 md:grid-cols-[1fr_0.72fr] md:items-end">
-            <div className="max-w-3xl">
+            <div>
               <p className="section-kicker">{copy.gallery.publicationKicker}</p>
-              <h3 className="mt-3 font-display text-[clamp(1.85rem,2.65vw,2.85rem)] font-bold leading-tight text-bone">{copy.gallery.publicationTitle}</h3>
+              <h3 className="mt-3 max-w-3xl font-display text-[clamp(1.9rem,2.7vw,2.9rem)] font-bold leading-tight text-bone">{copy.gallery.publicationTitle}</h3>
             </div>
             <p className="max-w-md text-sm leading-7 text-bone/58 md:ml-auto md:text-right">
               {copy.gallery.publicationBody}
             </p>
           </div>
 
-          <div className="grid gap-4 lg:grid-cols-2">
-            {galleryPublications.map((item, index) => (
-              <article key={`${item.no}-${item.title}`} className="group luxury-card card-reveal flex h-full flex-col rounded-[1.1rem] p-5" style={{ animationDelay: `${index * 70}ms` }}>
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-gold/30 bg-night/70 text-sm font-bold text-gold shadow-gold">{item.no}</span>
-                    <p className="inline-flex items-center gap-2 text-[0.68rem] font-black uppercase tracking-[0.22em] text-teal">
-                      <Newspaper size={14} />
-                      {copy.common.publication}
-                    </p>
-                  </div>
-                  <div className="min-w-0 rounded-xl border border-gold/15 bg-night/35 px-3 py-2 text-right">
-                    <p className="text-[0.62rem] font-black uppercase tracking-[0.2em] text-bone/38">{copy.common.media}</p>
-                    <p className="mt-0.5 max-w-36 truncate text-sm font-bold text-gold sm:max-w-44">{item.media}</p>
-                  </div>
+          <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">
+            {featuredPublication && (
+              <article className="group luxury-card card-reveal flex h-full flex-col rounded-[1.35rem] border-teal/22 p-5 transition hover:border-teal/45 hover:bg-moss/72 sm:p-6">
+                <div className="mb-5 flex items-start justify-between gap-4">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-gold/35 bg-night/60 font-display text-xl text-gold shadow-gold">{featuredPublication.no}</span>
+                  <span className="rounded-full border border-gold/20 px-3 py-1 text-sm font-bold text-gold">{featuredPublication.media}</span>
                 </div>
-                <div className="flex flex-1 flex-col">
-                  <h4 className="text-base font-extrabold leading-7 text-bone sm:text-[1.05rem]">{item.title}</h4>
-                  <div className="mt-4 h-px w-full bg-gold/10" />
-                </div>
-                <a href={item.link} target="_blank" rel="noreferrer" className="mt-4 inline-flex w-fit items-center justify-center gap-2 rounded-full border border-teal/40 bg-teal/10 px-4 py-2.5 text-sm font-bold text-teal transition hover:bg-teal hover:text-night">
+                <p className="inline-flex items-center gap-2 text-[0.68rem] font-black uppercase tracking-[0.22em] text-teal">
+                  <Newspaper size={14} />
+                  {copy.common.publication}
+                </p>
+                <h4 className="mt-5 text-[clamp(1.35rem,2.2vw,2rem)] font-black leading-tight text-bone">
+                  {featuredPublication.title}
+                </h4>
+                <div className="mt-6 h-px w-full bg-gold/12" />
+                <a href={featuredPublication.link} target="_blank" rel="noreferrer" className="mt-auto inline-flex w-fit items-center justify-center gap-2 pt-6 text-sm font-black text-teal transition hover:text-gold">
                   {copy.common.readNews}
                   <ExternalLink size={17} />
                 </a>
               </article>
-            ))}
+            )}
+
+            <div className="max-h-none divide-y divide-gold/10 overflow-hidden rounded-[1.35rem] border border-gold/15 bg-night/38 shadow-luxury lg:max-h-[34rem] lg:overflow-y-auto">
+              {secondaryPublications.map((item, index) => (
+                <article key={`${item.no}-${item.title}`} className="group card-reveal relative overflow-hidden p-5 transition hover:bg-moss/35" style={{ animationDelay: `${Math.min(index + 1, 6) * 80}ms` }}>
+                  <div className="pointer-events-none absolute inset-0 opacity-0 transition group-hover:opacity-100">
+                    <div className="absolute inset-y-0 -left-24 w-24 rotate-12 bg-bone/10 blur-xl transition duration-700 group-hover:translate-x-[34rem]" />
+                  </div>
+                  <div className="grid gap-4 sm:grid-cols-[3.5rem_1fr]">
+                    <span className="font-display text-3xl leading-none text-gold/80">{item.no}</span>
+                    <div className="min-w-0">
+                      <p className="text-sm font-bold text-gold">{item.media}</p>
+                      <h4 className="mt-1 text-base font-extrabold leading-7 text-bone">{item.title}</h4>
+                      <a href={item.link} target="_blank" rel="noreferrer" className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-teal transition hover:text-gold">
+                        {copy.common.readNews}
+                        <ExternalLink size={15} />
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </div>
 

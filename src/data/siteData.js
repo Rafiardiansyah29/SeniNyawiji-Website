@@ -2,6 +2,7 @@
   gunungan: "/assets/gunungan-1.png",
   lineGunungan: "/assets/line-art-gunungan.png",
   santri: "/assets/santri-jejer.png",
+  wayang: "/assets/wayang.jpg",
   poster: "/assets/poster-mahabbah.png",
   rebana: "/assets/penabuh-rebana.png",
   kitab: "/assets/pembaca-kitab.png",
@@ -18,6 +19,13 @@ export const whatsappNumber = "6281314553169";
 export const whatsappText = "Halo Majelis Seni Nyawiji, saya ingin berkonsultasi untuk mengundang pertunjukan Wayang Santri...";
 export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappText)}`;
 export const gallerySheetCsvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQvYKRCqoprdPkhmNfmF6h7uKh628SrXS5g0b6fA0Tv0i3fc41p-MAFWzLMO7LTdzigaKzHfYShTSNp/pub?gid=1092339592&single=true&output=csv";
+
+export const profileCardAudio = [
+  "/audio/wayang.mp3",
+  "/audio/dalang.mp3",
+  "/audio/penayagan.mp3",
+  "/audio/shalawat.mp3",
+];
 
 export const navItems = [
   { label: "Home", href: "#home" },

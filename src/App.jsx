@@ -17,6 +17,44 @@ export default function App() {
     document.documentElement.lang = lang === "id" ? "id" : "en";
   }, [lang]);
 
+  useEffect(() => {
+    const revealTargets = Array.from(document.querySelectorAll(".section-shell, .card-reveal"));
+
+    if (!("IntersectionObserver" in window)) {
+      revealTargets.forEach((target) => target.classList.add("is-visible"));
+      return undefined;
+    }
+
+    document.body.classList.add("reveal-ready");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        rootMargin: "0px 0px -12% 0px",
+        threshold: 0.12,
+      },
+    );
+
+    revealTargets.forEach((target) => {
+      if (target.classList.contains("card-reveal") && target.style.animationDelay) {
+        target.style.setProperty("--reveal-delay", target.style.animationDelay);
+      }
+      observer.observe(target);
+    });
+
+    return () => {
+      observer.disconnect();
+      document.body.classList.remove("reveal-ready");
+    };
+  }, []);
+
   return (
     <>
       <Header lang={lang} setLang={setLang} copy={copy} />
