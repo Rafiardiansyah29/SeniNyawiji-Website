@@ -34,27 +34,15 @@ export default function Organization({ copy }) {
         <div className="max-w-3xl">
           <p className="section-kicker">{copy.organization.kicker}</p>
           <h2 className="section-title">{copy.organization.title}</h2>
-          <p className="mt-5 text-[0.95rem] leading-8 text-bone/65">
+          <p className="mt-4 text-[0.95rem] leading-8 text-bone/65">
             {copy.organization.body}
           </p>
         </div>
 
-        <div className="relative mt-10">
-          <div className="pointer-events-none absolute left-1/2 top-[calc(100%+0.65rem)] hidden h-8 w-[2px] -translate-x-1/2 rounded-full bg-gold/80 shadow-[0_0_12px_rgba(201,166,70,0.38)] lg:block" />
-          <div className="pointer-events-none absolute left-[calc(25%+0.7rem)] top-[calc(100%+3.65rem)] hidden h-[2px] w-[calc(25%-1.4rem)] rounded-full bg-gold/80 shadow-[0_0_12px_rgba(201,166,70,0.38)] lg:block" />
-          <div className="pointer-events-none absolute left-[calc(50%+0.7rem)] top-[calc(100%+3.65rem)] hidden h-[2px] w-[calc(25%-1.4rem)] rounded-full bg-gold/80 shadow-[0_0_12px_rgba(201,166,70,0.38)] lg:block" />
-          <div className="pointer-events-none absolute left-1/4 top-[calc(100%+4.35rem)] hidden h-6 w-[2px] bg-gold/80 shadow-[0_0_12px_rgba(201,166,70,0.38)] lg:block" />
-          <div className="pointer-events-none absolute right-1/4 top-[calc(100%+4.35rem)] hidden h-6 w-[2px] bg-gold/80 shadow-[0_0_12px_rgba(201,166,70,0.38)] lg:block" />
-          <div className="pointer-events-none absolute left-1/2 top-[calc(100%+3.65rem)] z-10 hidden h-7 w-7 -translate-x-1/2 -translate-y-1/2 rounded-full bg-night lg:block" />
-          <div className="pointer-events-none absolute left-1/2 top-[calc(100%+3.65rem)] z-20 hidden h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-night bg-gold shadow-[0_0_14px_rgba(201,166,70,0.48)] lg:block" />
-          <div className="pointer-events-none absolute left-1/4 top-[calc(100%+3.65rem)] z-10 hidden h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-night lg:block" />
-          <div className="pointer-events-none absolute left-1/4 top-[calc(100%+3.65rem)] z-20 hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-night bg-gold shadow-[0_0_12px_rgba(201,166,70,0.42)] lg:block" />
-          <div className="pointer-events-none absolute right-1/4 top-[calc(100%+3.65rem)] z-10 hidden h-6 w-6 translate-x-1/2 -translate-y-1/2 rounded-full bg-night lg:block" />
-          <div className="pointer-events-none absolute right-1/4 top-[calc(100%+3.65rem)] z-20 hidden h-3 w-3 translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-night bg-gold shadow-[0_0_12px_rgba(201,166,70,0.42)] lg:block" />
-
+        <div className="relative mt-8">
           <div className="grid gap-5 lg:grid-cols-2">
             {organizationLeaders.map((person, index) => (
-              <article key={person.role} className="group luxury-card card-reveal relative overflow-hidden rounded-[1.75rem] p-5 sm:p-6" style={{ animationDelay: `${index * 100}ms` }}>
+              <article key={person.role} className="group luxury-card card-reveal relative overflow-hidden rounded-[1.5rem] p-5" style={{ animationDelay: `${index * 100}ms` }}>
                 <div className="absolute inset-x-6 top-0 h-px bg-teal/25" />
                 <div className="relative grid gap-5 sm:grid-cols-[10rem_1fr] sm:items-center">
                   <PersonPhoto
@@ -78,35 +66,18 @@ export default function Organization({ copy }) {
           </div>
         </div>
 
-        <div className="premium-frame relative mt-20 overflow-visible rounded-[1.75rem] p-5 sm:p-6">
-          <div className="pointer-events-none absolute -top-9 left-1/4 hidden h-9 w-[2px] bg-gold/80 shadow-[0_0_12px_rgba(201,166,70,0.38)] lg:block" />
-          <div className="pointer-events-none absolute -top-9 right-1/4 hidden h-9 w-[2px] bg-gold/80 shadow-[0_0_12px_rgba(201,166,70,0.38)] lg:block" />
-
-          <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+        <div className="premium-frame relative mt-12 overflow-hidden rounded-[1.5rem] p-5">
+          <div className="absolute inset-x-6 top-0 h-px bg-gold/30" />
+          <div className="mb-5 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <p className="section-kicker">{copy.common.performanceTeam}</p>
-              <h3 className="mt-3 font-display text-2xl font-bold text-bone sm:text-[1.7rem]">{copy.common.artisticOps}</h3>
+              <h3 className="mt-2 font-display text-2xl font-bold text-bone sm:text-[1.7rem]">{copy.common.artisticOps}</h3>
             </div>
             <p className="max-w-sm text-sm leading-6 text-bone/55">{copy.organization.teamNote}</p>
           </div>
 
           <div className="relative">
-            <div className="pointer-events-none absolute left-[calc(12.5%+0.65rem)] top-0 hidden h-[2px] w-[calc(25%-1.3rem)] rounded-full bg-gold/75 shadow-[0_0_12px_rgba(201,166,70,0.34)] lg:block" />
-            <div className="pointer-events-none absolute left-[calc(37.5%+0.65rem)] top-0 hidden h-[2px] w-[calc(25%-1.3rem)] rounded-full bg-gold/75 shadow-[0_0_12px_rgba(201,166,70,0.34)] lg:block" />
-            <div className="pointer-events-none absolute left-[calc(62.5%+0.65rem)] top-0 hidden h-[2px] w-[calc(25%-1.3rem)] rounded-full bg-gold/75 shadow-[0_0_12px_rgba(201,166,70,0.34)] lg:block" />
-            <div className="pointer-events-none absolute left-[12.5%] top-3 hidden h-5 w-[2px] -translate-x-1/2 bg-gold/75 shadow-[0_0_12px_rgba(201,166,70,0.34)] lg:block" />
-            <div className="pointer-events-none absolute left-[37.5%] top-3 hidden h-5 w-[2px] -translate-x-1/2 bg-gold/75 shadow-[0_0_12px_rgba(201,166,70,0.34)] lg:block" />
-            <div className="pointer-events-none absolute left-[62.5%] top-3 hidden h-5 w-[2px] -translate-x-1/2 bg-gold/75 shadow-[0_0_12px_rgba(201,166,70,0.34)] lg:block" />
-            <div className="pointer-events-none absolute left-[87.5%] top-3 hidden h-5 w-[2px] -translate-x-1/2 bg-gold/75 shadow-[0_0_12px_rgba(201,166,70,0.34)] lg:block" />
-            <div className="pointer-events-none absolute left-[12.5%] top-0 z-10 hidden h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-night lg:block" />
-            <div className="pointer-events-none absolute left-[12.5%] top-0 z-20 hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-night bg-gold shadow-[0_0_12px_rgba(201,166,70,0.42)] lg:block" />
-            <div className="pointer-events-none absolute left-[37.5%] top-0 z-10 hidden h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-night lg:block" />
-            <div className="pointer-events-none absolute left-[37.5%] top-0 z-20 hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-night bg-gold shadow-[0_0_12px_rgba(201,166,70,0.42)] lg:block" />
-            <div className="pointer-events-none absolute left-[62.5%] top-0 z-10 hidden h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-night lg:block" />
-            <div className="pointer-events-none absolute left-[62.5%] top-0 z-20 hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-night bg-gold shadow-[0_0_12px_rgba(201,166,70,0.42)] lg:block" />
-            <div className="pointer-events-none absolute left-[87.5%] top-0 z-10 hidden h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-night lg:block" />
-            <div className="pointer-events-none absolute left-[87.5%] top-0 z-20 hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-night bg-gold shadow-[0_0_12px_rgba(201,166,70,0.42)] lg:block" />
-            <div className="grid gap-4 pt-0 sm:grid-cols-2 lg:grid-cols-4 lg:pt-8">
+            <div className="grid gap-4 pt-1 sm:grid-cols-2 lg:grid-cols-4">
               {performanceMembers.map((member, index) => {
                 const localizedMember = copy.organization.performanceMembers[index] || [member.name, member.role, member.group];
                 const [name, role, group] = localizedMember;

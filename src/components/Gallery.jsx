@@ -127,17 +127,17 @@ export default function Gallery({ copy }) {
             <p className="section-kicker">{copy.gallery.kicker}</p>
             <h2 className="section-title mx-auto max-w-4xl">{copy.gallery.title}</h2>
           </div>
-          <div className="mt-6 h-px w-28 bg-gold/55 shadow-gold" />
+          <div className="mt-5 h-px w-28 bg-gold/55 shadow-gold" />
         </div>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {galleryPhotos.map((photo, index) => (
             <article key={`${photo.title}-${index}`} className="group luxury-card card-reveal flex h-full flex-col overflow-hidden rounded-[1.5rem] transition duration-500 hover:border-gold/55" style={{ animationDelay: `${index * 80}ms` }}>
               <div className="relative aspect-[4/3] overflow-hidden bg-moss/60">
                 <img src={photo.src} alt={photo.title} className="relative h-full w-full object-cover object-center transition duration-700 group-hover:scale-105" />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-night/18 via-transparent to-bone/5" />
               </div>
-              <div className="flex flex-1 flex-col border-t border-gold/15 p-5">
+              <div className="flex flex-1 flex-col border-t border-gold/15 p-4 sm:p-5">
                 <h3 className="font-display text-lg font-bold text-bone">{photo.title}</h3>
                 <p className="mt-2 text-left text-[0.82rem] leading-6 text-bone/60 [hyphens:auto] sm:text-justify">{photo.desc}</p>
               </div>
@@ -145,8 +145,8 @@ export default function Gallery({ copy }) {
           ))}
         </div>
 
-        <div className="premium-frame mt-16 overflow-hidden rounded-[1.75rem] p-5 sm:p-6">
-          <div className="mb-7 grid gap-4 border-b border-gold/10 pb-6 md:grid-cols-[1fr_0.72fr] md:items-end">
+        <div className="premium-frame mt-12 overflow-hidden rounded-[1.5rem] p-5">
+          <div className="mb-5 grid gap-4 border-b border-gold/10 pb-5 md:grid-cols-[1fr_0.72fr] md:items-end">
             <div>
               <p className="section-kicker">{copy.gallery.publicationKicker}</p>
               <h3 className="mt-3 max-w-3xl font-display text-[clamp(1.9rem,2.7vw,2.9rem)] font-bold leading-tight text-bone">{copy.gallery.publicationTitle}</h3>
@@ -158,7 +158,7 @@ export default function Gallery({ copy }) {
 
           <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">
             {featuredPublication && (
-              <article className="group luxury-card card-reveal flex h-full flex-col rounded-[1.35rem] border-teal/22 p-5 transition hover:border-teal/45 hover:bg-moss/72 sm:p-6">
+                <article className="group luxury-card card-reveal flex h-full flex-col rounded-[1.35rem] border-teal/22 p-5 transition hover:border-teal/45 hover:bg-moss/72">
                 <div className="mb-5 flex items-start justify-between gap-4">
                   <span className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-gold/35 bg-night/60 font-display text-xl text-gold shadow-gold">{featuredPublication.no}</span>
                   <span className="rounded-full border border-gold/20 px-3 py-1 text-sm font-bold text-gold">{featuredPublication.media}</span>

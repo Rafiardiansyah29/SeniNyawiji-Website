@@ -47,13 +47,13 @@ export default function Profile({ copy }) {
   return (
     <section id="profil" className="section-shell">
       <div className="absolute left-0 top-0 h-full w-px bg-gold/30" />
-      <div className="site-container relative grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+      <div className="site-container relative grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-10">
         <div className="order-2 lg:order-1">
           <div className="luxury-card card-reveal group overflow-hidden rounded-[1.75rem] p-3">
-            <div className="relative overflow-hidden rounded-[1.35rem] bg-moss/75">
-              <img src={assets.wayang} alt="Panggung wayang santri Majelis Seni Nyawiji" className="h-[300px] w-full object-cover object-center transition duration-700 group-hover:scale-[1.035] sm:h-[340px] lg:h-[390px]" />
-              <div className="absolute inset-0 bg-gradient-to-t from-night via-night/10 to-night/25" />
-              <div className="absolute left-5 top-5 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-night/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-gold backdrop-blur">
+            <div className="profile-wayang-frame relative overflow-hidden rounded-[1.35rem] bg-black">
+              <img src={assets.wayang} alt="Panggung wayang santri Majelis Seni Nyawiji" className="profile-wayang-image relative z-10 h-[300px] w-full object-contain object-center transition duration-700 sm:h-[340px] lg:h-[390px]" />
+              <div className="absolute inset-0 z-20 bg-gradient-to-t from-night/78 via-transparent to-night/18" />
+              <div className="absolute left-5 top-5 z-30 inline-flex items-center gap-2 rounded-full border border-gold/25 bg-night/70 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-gold backdrop-blur">
                 <MapPin size={15} />
                 Cilacap
               </div>
@@ -66,11 +66,11 @@ export default function Profile({ copy }) {
           <h2 className="mt-4 max-w-3xl font-display text-[clamp(1.95rem,2.85vw,3.25rem)] font-bold leading-[1.12] tracking-wide text-bone">
             {copy.profile.title}
           </h2>
-          <p className="mt-5 max-w-2xl text-[0.95rem] leading-8 text-bone/72">
+          <p className="mt-4 max-w-2xl text-[0.95rem] leading-8 text-bone/72">
             {copy.profile.body}
           </p>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          <div className="mt-7 grid gap-4 sm:grid-cols-2">
             {copy.profile.cards.map(([title, text], index) => (
               <article
                 key={title}

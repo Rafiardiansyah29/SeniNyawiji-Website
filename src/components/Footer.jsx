@@ -18,16 +18,16 @@ export default function Footer({ copy }) {
   ];
 
   return (
-    <footer className="relative overflow-hidden border-t border-gold/15 bg-black py-10 text-bone">
+    <footer className="relative overflow-hidden border-t border-gold/15 bg-black py-8 text-bone">
       <div className="absolute inset-x-0 top-0 h-px bg-teal/35" />
 
-      <div className="site-container relative grid gap-8 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
+      <div className="site-container relative grid gap-7 lg:grid-cols-[1.2fr_0.7fr_0.9fr]">
         <div className="max-w-xl">
           <p className="section-kicker">{copy.hero.kicker}</p>
           <h2 className="mt-3 font-display text-[1.7rem] font-bold leading-tight text-gold">Nyawiji</h2>
-          <p className="mt-4 text-sm leading-7 text-bone/62">{copy.footer.body}</p>
+          <p className="mt-3 text-sm leading-7 text-bone/62">{copy.footer.body}</p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-5 flex flex-wrap gap-3">
             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-5 py-3 text-sm font-bold text-night shadow-teal hover:bg-bone">
               <MessageCircle size={17} />
               {copy.common.booking}
@@ -76,7 +76,7 @@ export default function Footer({ copy }) {
         </div>
       </div>
 
-      <div className="site-container relative mt-8 flex flex-col gap-3 border-t border-bone/10 pt-6 text-sm text-bone/45 sm:flex-row sm:items-center sm:justify-between">
+      <div className="site-container relative mt-7 flex flex-col gap-3 border-t border-bone/10 pt-5 text-sm text-bone/45 sm:flex-row sm:items-center sm:justify-between">
         <span>&copy; 2026 Majelis Seni Nyawiji. {copy.common.rights}</span>
         <span>{copy.footer.tagline}</span>
       </div>

@@ -2,7 +2,7 @@
   gunungan: "/assets/gunungan-1.png",
   lineGunungan: "/assets/line-art-gunungan.png",
   santri: "/assets/santri-jejer.png",
-  wayang: "/assets/wayang.jpg",
+  wayang: "/assets/wayanggunung2.jpg",
   poster: "/assets/poster-mahabbah.png",
   rebana: "/assets/penabuh-rebana.png",
   kitab: "/assets/pembaca-kitab.png",

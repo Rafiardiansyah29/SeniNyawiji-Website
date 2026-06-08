@@ -72,7 +72,10 @@ export const translations = {
       kicker: "Booking Pertunjukan",
       title: "Undangan pentas dibuat rapi dari konsep sampai panggung.",
       body: "Setiap undangan dibicarakan dengan detail: tema acara, durasi lakon, kebutuhan panggung, tata suara, musik, dan pesan khusus yang ingin dibawa penyelenggara.",
+      eventTitle: "Cocok untuk",
+      eventSubtitle: "Format acara",
       flowTitle: "Alur undangan",
+      flowIntro: "Tiga langkah sederhana agar kebutuhan acara, konsep lakon, dan jadwal pementasan jelas sejak awal.",
       steps: [
         "Sampaikan tanggal, lokasi, jenis acara, dan estimasi audiens.",
         "Diskusikan tema lakon, durasi, dan kebutuhan teknis panggung.",
@@ -80,9 +83,10 @@ export const translations = {
       ],
     },
     contact: {
-      title: "Mari buat panggung yang dikenang.",
-      body: "Konsultasikan jadwal, konsep pentas, kebutuhan acara, dan estimasi teknis pertunjukan langsung melalui WhatsApp.",
-      cta: "WhatsApp Majelis Seni Nyawiji",
+      title: "Mau booking pertunjukan?",
+      body: "Klik tombol WhatsApp di bawah untuk menanyakan jadwal, konsep pentas, kebutuhan acara, dan estimasi teknis pertunjukan.",
+      prompt: "Tim Majelis Seni Nyawiji akan membalas langsung melalui WhatsApp.",
+      cta: "Klik WhatsApp untuk Booking",
     },
     footer: {
       body: "Wayang Santri dari Cilacap yang merawat ruang perjumpaan antara seni tradisi, pesantren, dan kebutuhan panggung masa kini.",
@@ -169,7 +173,10 @@ export const translations = {
       kicker: "Performance Booking",
       title: "Invited performances are prepared neatly from concept to stage.",
       body: "Every invitation is discussed in detail: event theme, story duration, stage needs, sound setup, music, and special messages the organizer wants to bring.",
+      eventTitle: "Suitable for",
+      eventSubtitle: "Event formats",
       flowTitle: "Invitation flow",
+      flowIntro: "Three simple steps to clarify event needs, story concept, and performance schedule from the start.",
       steps: [
         "Share the date, location, event type, and estimated audience.",
         "Discuss the story theme, duration, and technical stage needs.",
@@ -177,9 +184,10 @@ export const translations = {
       ],
     },
     contact: {
-      title: "Let us create a stage worth remembering.",
-      body: "Consult the schedule, performance concept, event needs, and technical estimate directly through WhatsApp.",
-      cta: "WhatsApp Nyawiji Art Ensemble",
+      title: "Want to book a performance?",
+      body: "Click the WhatsApp button below to ask about schedules, performance concepts, event needs, and technical estimates.",
+      prompt: "The Nyawiji team will reply directly through WhatsApp.",
+      cta: "Click WhatsApp to Book",
     },
     footer: {
       body: "Wayang Santri from Cilacap that nurtures the meeting point between traditional art, pesantren culture, and modern stage needs.",

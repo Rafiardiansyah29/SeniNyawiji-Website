@@ -85,14 +85,14 @@
   }
 
   .section-shell {
-    padding-block: clamp(4.75rem, 6.5vw, 6.75rem);
+    padding-block: clamp(4rem, 5.4vw, 5.75rem);
   }
 
   .site-container {
     width: 100%;
     max-width: 88rem;
     margin-inline: auto;
-    padding-inline: 1.25rem;
+    padding-inline: 1.125rem;
   }
 
   .section-shell::before,
@@ -101,7 +101,7 @@
     position: absolute;
     inset: auto 0 0 0;
     z-index: 0;
-    height: 14rem;
+    height: 11rem;
     pointer-events: none;
     background: rgba(3, 4, 3, 0.2);
   }
@@ -122,7 +122,7 @@
   }
 
   .section-title {
-    margin-top: 0.85rem;
+    margin-top: 0.75rem;
     max-width: 780px;
     color: #efe6d1;
     font-family: "Terang Bulan", serif;
@@ -227,6 +227,11 @@
     transform: translateY(0.08em);
     background: currentColor;
     opacity: 0;
+  }
+
+  .profile-wayang-image {
+    animation: profileWayangFloat 6.5s ease-in-out infinite;
+    transform-origin: center bottom;
   }
 
   .typewriter-text.is-active::after {
@@ -379,6 +384,17 @@
   }
 }
 
+@keyframes profileWayangFloat {
+  0%, 100% {
+    filter: drop-shadow(0 26px 32px rgba(0, 0, 0, 0.58)) drop-shadow(0 0 16px rgba(32, 199, 201, 0.16));
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 34px 42px rgba(0, 0, 0, 0.72)) drop-shadow(0 0 22px rgba(32, 199, 201, 0.2));
+    transform: translateY(-8px) scale(1.012);
+  }
+}
+
 @media (max-width: 767px) {
   body::before {
     width: 100vw;
@@ -390,7 +406,7 @@
   }
 
   .section-shell {
-    padding-block: 4rem;
+    padding-block: 3.35rem;
   }
 
   .section-title {
@@ -404,7 +420,7 @@
   }
 
   .site-container {
-    padding-inline: 1rem;
+    padding-inline: 0.95rem;
   }
 }
 
@@ -435,7 +451,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   #root,
-  .hero-subtitle {
+  .hero-subtitle,
+  .profile-wayang-image {
     animation: none;
   }
 
