@@ -43,24 +43,30 @@ export const photos = [
 export const publications = [
   {
     no: "01",
+    title: "Barzanji, Calung dan Wayang Santri Bersatu di Cilacap",
+    media: "RRI.co.id",
+    link: "https://share.google/frYOxOygkQkDEqnTs",
+  },
+  {
+    no: "02",
     title: "Musikalisasi Wayang Barzanji, Hadirkan Kisah Nabi dalam Balutan Seni Tradisi",
     media: "RCTI+",
     link: "https://www.rctiplus.com/news/detail/terkini/4527384/musikalisasi-wayang-barzanji-hadirkan-kisah-nabi-dalam-balutan-seni-tradisi",
   },
   {
-    no: "02",
+    no: "03",
     title: "Kisah Nabi Muhammad dalam Balutan Seni Tradisi: Musikalisasi Wayang Barzanji",
     media: "Sejuk",
     link: "https://sejuk.org/2024/09/23/kisah-nabi-muhammad-dalam-balutan-seni-tradisi-musikalisasi-wayang-barzanji/",
   },
   {
-    no: "03",
+    no: "04",
     title: "Angkat Lakon Resolusi Jihad, Kolaborasi Wayang Santri dan Pencak Silat Warnai Peringatan Hari Santri di Cilacap",
     media: "Liputan6.com",
     link: "https://www.liputan6.com/islami/read/5756519/angkat-lakon-resolusi-jihad-kolaborasi-wayang-santri-dan-pencak-silat-warnai-peringatan-hari-santri-di-cilacap",
   },
   {
-    no: "04",
+    no: "05",
     title: "Pementasan Wayang Warnai Peringatan Hari Santri di Cilacap",
     media: "Media Indonesia",
     link: "https://mediaindonesia.com/humaniora/711092/pementasan-wayang-warnai-peringatan-hari-santri-di-cilacap",
@@ -79,8 +85,8 @@ export const organizationPhotos = {
 };
 
 export const organizationLeaders = [
-  { name: "Abdul Aziz Rasjid", role: "Ketua Majelis", photo: organizationPhotos.ketua || assets.santri, note: "Penanggung jawab arah gerak, kemitraan, dan keputusan utama majelis." },
-  { name: "Muhammad Kharis", role: "Wakil Ketua", photo: organizationPhotos.wakilKetua || assets.kitab, note: "Mendampingi koordinasi program, agenda pentas, dan komunikasi lintas tim." },
+  { name: "Abdul Aziz Rasjid", role: "Koordinator 1", photo: organizationPhotos.ketua || assets.santri, note: "Perancang program, kemitraan, dan kolaborasi." },
+  { name: "Muhammad Kharis", role: "Koordinator 2", photo: organizationPhotos.wakilKetua || assets.kitab, note: "Koordinator program, agenda pementasan, dan komunikasi lintas tim." },
 ];
 
 export const socialMedia = [

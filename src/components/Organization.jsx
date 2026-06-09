@@ -41,28 +41,32 @@ export default function Organization({ copy }) {
 
         <div className="relative mt-8">
           <div className="grid gap-5 lg:grid-cols-2">
-            {organizationLeaders.map((person, index) => (
-              <article key={person.role} className="group luxury-card card-reveal relative overflow-hidden rounded-[1.5rem] p-5" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="absolute inset-x-6 top-0 h-px bg-teal/25" />
-                <div className="relative grid gap-5 sm:grid-cols-[10rem_1fr] sm:items-center">
-                  <PersonPhoto
-                    src={person.photo}
-                    alt={person.name}
-                    className="mx-auto aspect-[4/5] w-full max-w-[13rem] rounded-[1.2rem] sm:max-w-none"
-                    imageClassName="object-cover object-center group-hover:scale-105"
-                  />
-                  <div>
-                    <div className="mb-4 inline-grid h-12 w-12 place-items-center rounded-2xl border border-gold/30 bg-gold/10 text-gold shadow-gold">
-                      <Crown size={24} />
+            {organizationLeaders.map((person, index) => {
+              const leaderRole = copy.organization.leaderRoles?.[index];
+
+              return (
+                <article key={person.role} className="group luxury-card card-reveal relative overflow-hidden rounded-[1.5rem] p-5" style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="absolute inset-x-6 top-0 h-px bg-teal/25" />
+                  <div className="relative grid gap-5 sm:grid-cols-[10rem_1fr] sm:items-center">
+                    <PersonPhoto
+                      src={person.photo}
+                      alt={person.name}
+                      className="mx-auto aspect-[4/5] w-full max-w-[13rem] rounded-[1.2rem] sm:max-w-none"
+                      imageClassName="object-cover object-center group-hover:scale-105"
+                    />
+                    <div>
+                      <div className="mb-4 inline-grid h-12 w-12 place-items-center rounded-2xl border border-gold/30 bg-gold/10 text-gold shadow-gold">
+                        <Crown size={24} />
+                      </div>
+                      <p className="text-xs font-black uppercase tracking-[0.3em] text-teal">{copy.organization.leaderLabels[index] || copy.organization.leaderLabels[1]}</p>
+                      <h3 className="mt-2 font-display text-[1.35rem] font-bold text-bone">{person.name}</h3>
+                      {leaderRole && <p className="mt-1 text-sm font-bold text-gold">{leaderRole}</p>}
+                      <p className="mt-3 text-sm leading-7 text-bone/62">{copy.organization.leaderNotes[index] || person.note}</p>
                     </div>
-                    <p className="text-xs font-black uppercase tracking-[0.3em] text-teal">{copy.organization.leaderLabels[index] || copy.organization.leaderLabels[1]}</p>
-                    <h3 className="mt-2 font-display text-[1.35rem] font-bold text-bone">{person.name}</h3>
-                    <p className="mt-1 text-sm font-bold text-gold">{copy.organization.leaderRoles[index] || person.role}</p>
-                    <p className="mt-3 text-sm leading-7 text-bone/62">{copy.organization.leaderNotes[index] || person.note}</p>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
         </div>
 
